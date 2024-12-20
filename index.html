@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleksey Kon Games</title>
@@ -8,19 +9,26 @@
 </head>
 <body>
     <header id="main-header">
-        <h1>Привет в Aleksey Kon Games</h1>
+        <div style="position: absolute; padding: 10px; bottom: 30%; right: 0;">
+            <a id="lang-toggle-btn" onclick="toggleLanguage()" class="lang-button">RU</a>
+        </div>
+        <h1 data-lang='{"ru": "Привет в Aleksey Kon Games", "en": "Welcome to Aleksey Kon Games"}'>Привет в Aleksey Kon Games</h1>
+        
         <nav>
-            <a href="#about">О Компании</a>
-            <a href="#release">Проект</a>
-            <a href="#team">Обо Мне</a>
-            <a href="#contact">Контакты</a>
+            <a href="#about" data-lang='{"ru": "О Компании", "en": "About Company"}'>О Компании</a>
+            <a href="#release" data-lang='{"ru": "Проект", "en": "Project"}'>Проект</a>
+            <a href="#team" data-lang='{"ru": "Обо Мне", "en": "About Me"}'>Обо Мне</a>
+            <a href="#contact" data-lang='{"ru": "Контакты", "en": "Contacts"}'>Контакты</a>
             
         </nav>
+        
     </header>
 
     <section class="about" id="about">
-        <h2>О Компании</h2>
-        <p>Aleksey Kon Games — это инди-студия, ориентированная на разработку небольших игр, доступных на различных платформах, с акцентом на креативность и участие в конкурсах и игровых сообществах. Основателем и ведущим разработчиком является Алексей Кон.</p>
+        <h2 data-lang='{"ru": "О Компании", "en": "About Company"}'>О Компании</h2>
+        <p data-lang='{"ru": "Aleksey Kon Games — это инди-студия, ориентированная на разработку небольших игр, доступных на различных платформах, с акцентом на креативность и участие в конкурсах и игровых сообществах. Основателем и ведущим разработчиком является Алексей Кон.", 
+        "en": "Aleksey Kon Games is an indie studio focused on creating small games available on various platforms, with an emphasis on creativity and participation in contests and gaming communities. The founder and lead developer is Aleksey Kon."}'>
+            Aleksey Kon Games — это инди-студия, ориентированная на разработку небольших игр, доступных на различных платформах, с акцентом на креативность и участие в конкурсах и игровых сообществах. Основателем и ведущим разработчиком является Алексей Кон.</p>
         <div class="contacts">
             <a href="https://t.me/Aleksey_Kon_Games" target="_blank">
                 <img src="images/tg.png" alt="Telegram">
@@ -36,7 +44,9 @@
 
     <section id="release" class="release">
         <h2>Eva Platformer</h2>
-        <p>Eva Platformer это игра в жанре платформер, где вам предстоит собирать монеты и ключи. В игре вы играете за главного персонажа Еву. Соберите все монеты и сразитесь с врагами.</p>
+        <p data-lang='{"ru": "Eva Platformer это игра в жанре платформер, где вам предстоит собирать монеты и ключи. В игре вы играете за главного персонажа Еву. Соберите все монеты и сразитесь с врагами.", 
+        "en": "Eva Platformer is a platformer game where you collect coins and keys. You play as the main character Eva. Gather all the coins and fight the enemies."}'>
+        Eva Platformer это игра в жанре платформер, где вам предстоит собирать монеты и ключи. В игре вы играете за главного персонажа Еву. Соберите все монеты и сразитесь с врагами.</p>
         <div class="release-carousel">
             <img src="images/eva1.jpg" alt="Game Screenshot 1" onclick="enlargeImage(this)">
             <img src="images/eva2.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
@@ -45,18 +55,23 @@
             <img src="images/eva5.jpg" alt="Game Screenshot 4" onclick="enlargeImage(this)">
         </div>
         <p></p>
-        <a class="steam-button" href="https://store.steampowered.com/app/3176450/Eva_Platformer/" target="_blank">Посмотреть в Steam</a>
+        <a class="steam-button" href="https://store.steampowered.com/app/3176450/Eva_Platformer/" target="_blank" data-lang='{"ru": "Посмотреть в Steam", "en": "View on Steam"}'>Посмотреть в Steam</a>
         
     </section>
 
     <section id="team">
-        <h2>Обо мне</h2>
+        <h2 data-lang='{"ru": "Обо Мне", "en": "About Me"}'>Обо мне</h2>
         <div class="team">
             
                 <img class="aleksey-img" src="images/alekseykon.jpg" alt="Team Leader">
-                <h3 class="text-h3">Алексей Кондраков</h3>
-                <h4 class="text-h4">19 лет, Solo Game Developer</h4>
-                <p>Я начинающий разработчик игр! Начал изучать C# и Unity в 17 лет! Закончил курсы по специальности Unity разработчик. Поучавствовал в нескольких конкурсах: Киберфест, Начни игру. Ещё на базовом уровне знаю: Spine 2D, 2D дизайн и анимацию, Level Designer, С# Wpf.</p>
+                <h3 class="text-h3" data-lang='{"ru": "Алексей Кондраков", "en": "Aleksey Kondrakov"}'>Алексей Кондраков</h3>
+                <h4 class="text-h4" data-lang='{"ru": "19 лет, Solo Game Developer", 
+                "en": "19 years old, Solo Game Developer"}'>19 лет, Solo Game Developer</h4>
+                <p data-lang=
+                '{"ru": "Я начинающий разработчик игр! Начал изучать C# и Unity в 17 лет! Закончил курсы по специальности Unity разработчик. Поучавствовал в нескольких конкурсах: Киберфест, Начни игру. Ещё на базовом уровне знаю: Spine 2D, 2D дизайн и анимацию, Level Designer, С# Wpf.", 
+                "en": "I am a beginner game developer! I started learning C# and Unity at the age of 17! I completed courses to become a Unity developer. I have participated in several contests: Cyberfest, Start the Game. I also have basic knowledge of Spine 2D, 2D design and animation, Level Design, and C# WPF."}'>
+                
+                    Я начинающий разработчик игр! Начал изучать C# и Unity в 17 лет! Закончил курсы по специальности Unity разработчик. Поучавствовал в нескольких конкурсах: Киберфест, Начни игру. Ещё на базовом уровне знаю: Spine 2D, 2D дизайн и анимацию, Level Designer, С# Wpf.</p>
                 <div class="contacts">
                     <a href="https://github.com/Aleksey-Kon" target="_blank">
                         <img src="images/github.png" alt="github">
@@ -72,9 +87,9 @@
     </section>
 
     <section id="contact">
-        <h2>Контакты</h2>
-        <p>Напишите нам, не стесняйтесь ;&#41</p>
-        <p>По любому поводу</p>
+        <h2 data-lang='{"ru": "Контакты", "en": "Contacts"}'>Контакты</h2>
+        <p data-lang='{"ru": "Напишите нам, не стесняйтесь ;&#41", "en": "Feel free to write to us ;&#41"}'>Напишите нам, не стесняйтесь ;&#41</p>
+        <p data-lang='{"ru": "По любому поводу",  "en": "For any reason"}'>По любому поводу</p>
         <p>Email: <a href="mailto:alekseykongames@gmail.com" style="color: #ff5722;">alekseykongames@gmail.com</a></p>
         <div class="contacts">
             <a href="https://t.me/aleksey_kon" target="_blank">
@@ -87,7 +102,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Aleksey Kon Games</p>
+        <p>&copy; 2024 Aleksey Kon Games - Gamedev never alone</p>
     </footer>
 
     <script src="js/main.js"></script>

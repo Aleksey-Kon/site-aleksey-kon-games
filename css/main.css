@@ -205,4 +205,19 @@ body {
             line-height: 0.3;
         }
 
-        
+
+        .lang-button  {
+            
+            color: #333;
+            text-decoration: none;
+            background-color: #ffcc80;
+            padding: 0.5rem 1.3rem;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .lang-button:hover {
+            background-color: #ffb74d;
+            transform: scale(1.05);
+        }

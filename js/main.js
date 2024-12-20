@@ -49,3 +49,35 @@ const header = document.getElementById('main-header');
         
             document.body.appendChild(modal);
         }
+
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll("[data-lang]");
+            elements.forEach(el => {
+                const translations = JSON.parse(el.dataset.lang);
+                el.textContent = translations[lang];
+            });
+        }
+
+        function detectLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang && !userLang.startsWith('ru')) {
+                switchLanguage('en');
+            }
+        }
+
+        let currentLanguage = 'ru';
+
+    function toggleLanguage() {
+        currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+        const button = document.getElementById('lang-toggle-btn');
+        button.textContent = currentLanguage.toUpperCase();
+
+        // Example language switching functionality
+        const elements = document.querySelectorAll("[data-lang]");
+        elements.forEach(el => {
+            const translations = JSON.parse(el.dataset.lang);
+            el.textContent = translations[currentLanguage];
+        });
+    }
+
+        window.onload = detectLanguage;
