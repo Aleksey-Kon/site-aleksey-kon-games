@@ -59,13 +59,13 @@ const header = document.getElementById('main-header');
         }
 
         function detectLanguage() {
-            const userLang = navigator.language || navigator.userLanguage;
+            const userLang = navigator.language;
             if (userLang && !userLang.startsWith('ru')) {
                 switchLanguage('en');
             }
         }
 
-        let currentLanguage = 'ru';
+        let currentLanguage = navigator.language;
 
     function toggleLanguage() {
         currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
@@ -79,5 +79,8 @@ const header = document.getElementById('main-header');
             el.textContent = translations[currentLanguage];
         });
     }
-
-        window.onload = detectLanguage;
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        detectLanguage(); // Ваш код для определения языка
+      });
+        
