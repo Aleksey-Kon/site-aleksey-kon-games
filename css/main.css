@@ -225,8 +225,71 @@ body {
 
 
 
+        .slides-container {
+            display: flex;
+            overflow: hidden; 
+            width: 100%; /* Устанавливаем ширину контейнера */
+            height: 100%; /* Устанавливаем высоту контейнера */
+            position: relative;
+        }
 
 
+        .slide {
+            opacity: 0;
+            /*transform: translateX(-100%);*/
+            pointer-events: none;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.6s ease, transform 0.7s ease;
+            flex: 0 0 100%;
+            
+            width: 100%;
+            height: 100%;
+        }
 
-
+        .slide2{
+            transform: translateX(-100%);
+            transition: opacity 0.6s ease, transform 0.7s ease;
+        }
+        .slide3{
+            transform: translateX(-200%);
+            transition: opacity 0.6s ease, transform 0.7s ease;
+        }
         
+        .slide.active {
+            opacity: 1;
+            /*transform: translateX(0);*/
+            pointer-events:all;
+            
+        }
+          .arrows {
+            position: relative;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .arrow {
+            background-color: #ffcc80; /* ярко-оранжевый цвет */
+            color: #fffff6;
+            border: 2px solid #efc17c; /* слегка темнее для границы */
+            border-radius: 5px; /* закругленные края */
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* плавные переходы */
+          }
+          
+          .arrow:hover {
+            background-color: #f7b655; /* темнее при наведении */
+            transform: scale(1.1); /* небольшое увеличение */
+          }
+          
+          .arrow:disabled {
+            background-color: #fae1bc; /* полупрозрачный оранжевый */
+            border-color: #edd2aa; /* соответствующий цвет границы */
+            cursor: not-allowed;
+          }
+          
+
