@@ -129,7 +129,8 @@ body {
         .release-carousel img:hover {
             transform: scale(1.05);
         }
-        .release a {
+        .steam-button {
+            margin: 6%;
             color: #333;
             text-decoration: none;
             background-color: #ffcc80;
@@ -139,7 +140,7 @@ body {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, transform 0.3s;
         }
-        .release a:hover {
+        .steam-button:hover {
             background-color: #ffb74d;
             transform: scale(1.05);
         }
@@ -166,9 +167,7 @@ body {
         .about {
             margin-top: 12rem;
         }
-        .steam-button{
-            margin: 6%;
-        }
+        
         ::-webkit-scrollbar{
             height: 8px;
             width: 8px;
@@ -231,6 +230,7 @@ body {
             width: 100%; /* Устанавливаем ширину контейнера */
             height: 100%; /* Устанавливаем высоту контейнера */
             position: relative;
+            scroll-margin: 10px;
         }
 
 
@@ -270,26 +270,39 @@ body {
           }
           
           .arrow {
+            opacity: 0.9;
             background-color: #ffcc80; /* ярко-оранжевый цвет */
             color: #fffff6;
-            border: 2px solid #efc17c; /* слегка темнее для границы */
+            border: 2px ; /* слегка темнее для границы */
             border-radius: 5px; /* закругленные края */
             padding: 10px 15px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.2s ease; /* плавные переходы */
           }
           
           .arrow:hover {
             background-color: #f7b655; /* темнее при наведении */
+            
             transform: scale(1.1); /* небольшое увеличение */
           }
           
           .arrow:disabled {
             background-color: #fae1bc; /* полупрозрачный оранжевый */
-            border-color: #edd2aa; /* соответствующий цвет границы */
+            border-color: #fae1bc; /* соответствующий цвет границы */
             cursor: not-allowed;
           }
+
+          .prev {
+            position: ABSOLUTE;
+            top: -170PX;
+            left: -15px;
+        }
+            .next {
+            position: ABSOLUTE;
+            top: -170PX;
+            right: -15px;
+        }
           
 

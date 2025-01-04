@@ -54,7 +54,7 @@
         
         <nav>
             <a href="#about" data-lang='{"ru": "О Компании", "en": "About Company"}'>О Компании</a>
-            <a href="#release" data-lang='{"ru": "Проект", "en": "Project"}'>Проект</a>
+            <a href="#release" data-lang='{"ru": "Проекты", "en": "Projects"}'>Проекты</a>
             <a href="#team" data-lang='{"ru": "Обо Мне", "en": "About Me"}'>Обо Мне</a>
             <a href="#contact" data-lang='{"ru": "Контакты", "en": "Contacts"}'>Контакты</a>
             
@@ -84,12 +84,12 @@
         </div>
     </section>
 
-    <section>
+    <!--<section>
         <h2 data-lang='{"ru": "Счастливого нового года", "en": "Happy New Year"}'>Счастливого нового года</h2>
         <p data-lang='{"ru": "Всех с праздником, удачи в реализации проектов - Алексей Кон", 
         "en": "Happy Holidays to all. good luck to realize your projects - Aleksey Kon"}'>
         Всех с праздником, удачи в реализации проектов - Алексей Кон</p>
-    </section>
+    </section>-->
 
     <section id="release" class="release">
         <h2>Eva Platformer</h2>
@@ -109,13 +109,14 @@
     </section>
 
     <section id="release" class="release">
-        <h2>Другие проекты</h2>
+        <h2 data-lang='{"ru": "Другие проекты", "en": "Other projects"}'>Другие проекты</h2>
 
         <div class="slides-container">
         <div class="slide active">
             <div>
-                <p>
-                Персонаж Алёна, а так же работа в spine 2d </p>
+                <p data-lang='{"ru": "Персонаж Алёна, а так же работа в spine 2d. Персонаж выполнен в аниме-стиле и состоит из множества слоёв. Для анимации используется скелетная структура с продуманной иерархией костей и настройкой весов.",
+                "en": "Character Alyona, as well as work in spine 2d. The character is made in anime style and consists of many layers. For animation is used skeletal structure with elaborate hierarchy of bones and adjustment of weights."}'>
+                Персонаж Алёна, а так же работа в spine 2d. Персонаж выполнен в аниме-стиле и состоит из множества слоёв. Для анимации используется скелетная структура с продуманной иерархией костей и настройкой весов.</p>
             </div>
             <div class="release-carousel">
                 <img src="images/spine/1.jpg" onclick="enlargeImage(this)">
@@ -125,30 +126,42 @@
         </div>
         <div class="slide slide2">
             <div>
-                <p>В игре вы играете за главного персонажа Еву. Соберите все монеты и сразитесь с врагами.</p>
+                <p id="contentgame" data-lang='{"ru": "C# WPF программы для воспроизведения радио: Europa Plus и electro swing radio.", "en": "C# WPF program to play radio: Europa Plus and electro swing radio."}'
+                
+                
+                
+                >C# WPF программы для воспроизведения радио: Europa Plus и electro swing radio.
+                    
+                </p>
+                <p style="display: inline" data-lang='{"ru": "Исходный код:", "en": "Source code:"}'>Исходный код:</p>  <a style="display: inline" href="https://github.com/Aleksey-Kon/Europa-Plus-WPF">Europa Plus WPF</a>,
+                <a style="display: inline" href="https://github.com/Aleksey-Kon/electro-swing-radio">Electro Swing Radio</a>
+
             </div>
             <div class="release-carousel">
-                <img src="images/eva1.jpg" alt="Game Screenshot 1" onclick="enlargeImage(this)">
-                <img src="images/eva2.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
-
+                <img src="images/radio/1.jpg" alt="Game Screenshot 1" onclick="enlargeImage(this)">
+                <img src="images/radio/2.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
+                <img src="images/radio/3.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
             </div>
         </div>
 
         <div class="slide slide3">
             <div>
-                <p>3 слайд</p>
+                <p  data-lang='{"ru": "HB Project – это нереализованный проект, по Адскому Боссу. В рамках разработки было создано несколько анимированных персонажей, проработаны фоны и интерфейс меню.",
+                "en": "HB Project is an unrealized project, on Hellua Boss. As part of the development, several animated characters, backgrounds and menu interface were created."}'
+                
+                >HB Project – это нереализованный проект, по Адскому Боссу. В рамках разработки было создано несколько анимированных персонажей, проработаны фоны и интерфейс меню.</p>
             </div>
             <div class="release-carousel">
-                <img src="images/eva1.jpg" alt="Game Screenshot 1" onclick="enlargeImage(this)">
-                <img src="images/eva2.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
-
+                <img src="images/hb-project/1.jpg" alt="Game Screenshot 1" onclick="enlargeImage(this)">
+                <img src="images/hb-project/2.jpg" alt="Game Screenshot 2" onclick="enlargeImage(this)">
+                <img src="images/hb-project/3.jpg" alt="Game Screenshot 3" onclick="enlargeImage(this)">
             </div>
         </div>
     </div>
 
         <div class="arrows">
-            <button class="arrow" id="prev">&lt;</button>
-            <button class="arrow" id="next">&gt;</button>
+            <button class="arrow prev" id="prev">&lt;</button>
+            <button class="arrow next" id="next">&gt;</button>
         </div>
     </section>
 

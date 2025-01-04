@@ -152,3 +152,23 @@ const header = document.getElementById('main-header');
     });
 
     updateSlides();
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Найти элемент
+        const contentDiv = document.getElementById("contentgame");
+    
+        // Получить значение data-lang
+        const rawData = contentDiv.getAttribute("data-lang");
+    
+        // Раскодировать JSON
+        const decodedData = JSON.parse(rawData);
+    
+        // Выбрать язык, например "ru"
+        const htmlContent = decodedData.ru;
+    
+        // Поместить раскодированный HTML в элемент
+        contentDiv.innerHTML = htmlContent;
+    });
+    
